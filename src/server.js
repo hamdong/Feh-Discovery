@@ -12,8 +12,9 @@ app.get('/', (req, res, next) => {
   res.json({ message: 'Ok' });
 });
 
-app.get('/api/users', (req, res, next) => {
-  var sql = 'select * from user';
+app.get('/api/skills', (req, res, next) => {
+  var sql =
+    'SELECT name, slot, cond, stat, buff FROM tblSkill INNER JOIN tblEffect ON tblSkill.effectId = tblEffect.id; ORDER BY tblSkill.name DESC';
   var params = [];
   db.all(sql, params, (err, rows) => {
     if (err) {
