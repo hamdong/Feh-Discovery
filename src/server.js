@@ -12,9 +12,24 @@ app.get('/', (req, res, next) => {
   res.json({ message: 'Ok' });
 });
 
+app.get('/api/effects', (req, res, next) => {
+  var sql = 'SELECT * from tblEffect';
+  var params = [];
+  db.all(sql, params, (err, rows) => {
+    if (err) {
+      res.status(400).json({ error: err.message });
+      return;
+    }
+    res.json({
+      message: 'success',
+      data: rows,
+    });
+  });
+});
+
 app.get('/api/skills', (req, res, next) => {
   var sql =
-    'SELECT name, slot, cond, stat, buff FROM tblSkill INNER JOIN tblEffect ON tblSkill.effectId = tblEffect.id; ORDER BY tblSkill.name DESC';
+    'SELECT tblSkill.effectId, name, slot, cond, value, stat FROM tblSkill INNER JOIN tblEffect ON tblSkill.effectId = tblEffect.id; ORDER BY tblSkill.name DESC';
   var params = [];
   db.all(sql, params, (err, rows) => {
     if (err) {
