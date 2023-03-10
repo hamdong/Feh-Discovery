@@ -1,6 +1,5 @@
 import express, { Express, Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
-import { db } from './database';
 
 const app: Express = express();
 const prisma = new PrismaClient();
@@ -29,8 +28,31 @@ app.get('/api/users/:id', async (req: Request, res: Response, next) => {
 });
 
 app.get('/api/skills', async (req: Request, res: Response, next) => {
-  const skills = await prisma.skill.findMany();
-  res.json(skills);
+  const skills = await prisma.skill.findMany({
+    include: {
+      cond: {
+        select: {
+          cond: true,
+        },
+      },
+      effect: {
+        select: {
+          description: true,
+          deltaSoft: true,
+          deltaHard: true,
+        },
+      },
+    },
+  });
+
+  const mapped = skills.map((skill) => ({
+    ...skill,
+    effect: skill.effect.map((effect) => ({
+      ...effect,
+      deltaSoft: effect.deltaSoft !== null ? JSON.parse(effect.deltaSoft) : '',
+    })),
+  }));
+  res.json(mapped);
 });
 
 /*

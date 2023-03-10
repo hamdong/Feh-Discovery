@@ -103,9 +103,6 @@ dist
 # TernJS port file
 .tern-port
 
-# Generated Sqlite DB
-src/db.sqlite
-
 # Migrations
 prisma/migrations
 prisma/dev.db

@@ -11,6 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/index.ts",
     "migrate": "npx prisma migrate dev --name init",
+    "reset": "npx prisma migrate reset",
     "seed": "npx prisma db seed"
   },
   "repository": {
