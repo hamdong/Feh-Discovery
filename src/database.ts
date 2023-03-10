@@ -1,9 +1,8 @@
-var sqlite3 = require('sqlite3').verbose();
-var md5 = require('md5');
+import { Database } from "sqlite3";
 
 const DBSOURCE = 'src/db.sqlite';
 
-let db = new sqlite3.Database(DBSOURCE, (err) => {
+export const db = new Database(DBSOURCE, (err) => {
   if (err) {
     // Cannot open database
     console.error(err.message);
@@ -41,16 +40,12 @@ db.serialize(() => {
       cond TEXT NOT NULL,
       stat CHAR(3) NOT NULL REFERENCES tblStat (stat) ON DELETE CASCADE
     )`,
-    (err) => {
+    (err: Error) => {
       if (err) {
         // Table already created
         console.log(err.message);
       } else {
         // Table just created, creating some rows
-        try {
-        } catch (err) {
-          console.log(err.message);
-        }
       }
     }
   );
@@ -87,5 +82,3 @@ db.serialize(() => {
   db.run(insert, ['Darting Blow 2', 'A', 4, 2]);
   db.run(insert, ['Darting Blow 3', 'A', 6, 2]);
 });
-
-module.exports = db;
