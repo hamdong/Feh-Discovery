@@ -105,3 +105,8 @@ dist
 
 # Generated Sqlite DB
 src/db.sqlite
+
+# Migrations
+prisma/migrations
+prisma/dev.db
+prisma/dev.db-journal

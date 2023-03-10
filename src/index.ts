@@ -1,7 +1,9 @@
 import express, { Express, Request, Response } from 'express';
+import { PrismaClient } from '@prisma/client';
 import { db } from './database';
 
 const app: Express = express();
+const prisma = new PrismaClient();
 
 const HTTP_PORT: string = '8000';
 // Start server
@@ -10,11 +12,30 @@ app.listen(HTTP_PORT, () => {
 });
 
 app.get('/', (req: Request, res: Response, next) => {
-  res.json({ message: 'Ok' }); 
+  res.json({ message: 'Ok' });
 });
 
+app.get('/api/users', async (req: Request, res: Response, next) => {
+  const users = await prisma.user.findMany();
+  res.json(users);
+});
+
+app.get('/api/users/:id', async (req: Request, res: Response, next) => {
+  const { id }: { id?: string } = req.params;
+  const users = await prisma.user.findUnique({
+    where: { id: Number(id) },
+  });
+  res.json(users);
+});
+
+app.get('/api/skills', async (req: Request, res: Response, next) => {
+  const skills = await prisma.skill.findMany();
+  res.json(skills);
+});
+
+/*
 app.get('/api/effects', (req: Request, res: Response, next) => {
-  var sql = 'SELECT * from tblEffect';
+  const sql = 'SELECT * from tblEffect';
   var params: never[] = [];
   db.all(sql, params, (err, rows) => {
     if (err) {
@@ -29,7 +50,7 @@ app.get('/api/effects', (req: Request, res: Response, next) => {
 });
 
 app.get('/api/skills', (req: Request, res: Response, next) => {
-  var sql =
+  const sql =
     'SELECT tblSkill.effectId, name, slot, cond, value, stat FROM tblSkill INNER JOIN tblEffect ON tblSkill.effectId = tblEffect.id; ORDER BY tblSkill.name DESC';
   var params: never[] = [];
   db.all(sql, params, (err, rows) => {
@@ -47,3 +68,4 @@ app.get('/api/skills', (req: Request, res: Response, next) => {
 app.use(function (req: Request, res: Response) {
   res.status(404);
 });
+*/
