@@ -36,7 +36,8 @@ model Skill {
 
 model Condition {
   id      Int    @id @default(autoincrement())
-  cond    String
+  target  String
+  action  String
   skill   Skill? @relation(fields: [skillId], references: [id])
   skillId Int?
 }

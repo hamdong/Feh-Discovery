@@ -1,4 +1,6 @@
 import { PrismaClient } from '@prisma/client';
+import { Action } from './models/action.enum';
+import { Target } from './models/target.enum';
 
 const prisma = new PrismaClient();
 async function main() {
@@ -48,7 +50,8 @@ async function main() {
       cond: {
         create: [
           {
-            cond: 'Unit initiates combat',
+            target: Target.Unit,
+            action: Action.InitiateCombat,
           },
         ],
       },
@@ -70,7 +73,8 @@ async function main() {
       cond: {
         create: [
           {
-            cond: 'Unit initiates combat',
+            target: Target.Unit,
+            action: Action.InitiateCombat,
           },
         ],
       },
@@ -92,7 +96,8 @@ async function main() {
       cond: {
         create: [
           {
-            cond: 'Unit initiates combat',
+            target: Target.Unit,
+            action: Action.InitiateCombat,
           },
         ],
       },

@@ -32,7 +32,8 @@ app.get('/api/skills', async (req: Request, res: Response, next) => {
     include: {
       cond: {
         select: {
-          cond: true,
+          target: true,
+          action: true,
         },
       },
       effect: {
