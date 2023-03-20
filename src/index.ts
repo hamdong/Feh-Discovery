@@ -1,3 +1,5 @@
+// THIS FILE TO BE DELETED BECAUSE WE ARE USING NESTJS INSTEAD
+
 import express, { Express, Request, Response } from 'express';
 import { PrismaClient } from '@prisma/client';
 
@@ -25,35 +27,6 @@ app.get('/api/users/:id', async (req: Request, res: Response, next) => {
     where: { id: Number(id) },
   });
   res.json(users);
-});
-
-app.get('/api/skills', async (req: Request, res: Response, next) => {
-  const skills = await prisma.skill.findMany({
-    include: {
-      cond: {
-        select: {
-          target: true,
-          action: true,
-        },
-      },
-      effect: {
-        select: {
-          description: true,
-          deltaSoft: true,
-          deltaHard: true,
-        },
-      },
-    },
-  });
-
-  const mapped = skills.map((skill) => ({
-    ...skill,
-    effect: skill.effect.map((effect) => ({
-      ...effect,
-      deltaSoft: effect.deltaSoft !== null ? JSON.parse(effect.deltaSoft) : '',
-    })),
-  }));
-  res.json(mapped);
 });
 
 /*
