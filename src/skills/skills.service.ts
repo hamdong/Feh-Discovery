@@ -35,6 +35,10 @@ export class SkillsService {
     return mapped;
   }
 
+  async findByName(name: string) {
+    return `This action returns a skill by its name`;
+  }
+
   findOne(id: number) {
     return `This action returns a #${id} skill`;
   }

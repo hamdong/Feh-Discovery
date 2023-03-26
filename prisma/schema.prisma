@@ -47,6 +47,7 @@ model Effect {
   description String
   deltaSoft   String?
   deltaHard   String?
+  deltaFlat   String?
   skill       Skill?  @relation(fields: [skillId], references: [id])
   skillId     Int
 }

@@ -10,6 +10,11 @@ export class SkillsController {
     return this.skillsService.findAll();
   }
 
+  @Get(':name')
+  findByName(@Param('name') name: string) {
+    return this.skillsService.findByName(name);
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.skillsService.findOne(+id);
