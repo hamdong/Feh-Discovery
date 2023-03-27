@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
-import { Action } from './models/action.enum';
-import { Slot } from './models/slot.enum';
-import { Target } from './models/target.enum';
+import { Target } from './enums/target.enum';
+import { SkillFamily } from './models/skill-family';
+import { skills } from './models/skill-list';
 
 const prisma = new PrismaClient();
 async function main() {
@@ -44,42 +44,11 @@ async function main() {
   });
   console.log({ alice, bob });
 
-  const deathBlow1 = await createSkill(
-    'Death Blow 1',
-    Action.UnitInitiateCombat,
-    { atk: 2 },
-  );
-  const deathBlow2 = await createSkill(
-    'Death Blow 2',
-    Action.UnitInitiateCombat,
-    { atk: 4 },
-  );
-  const deathBlow3 = await createSkill(
-    'Death Blow 3',
-    Action.UnitInitiateCombat,
-    { atk: 6 },
-  );
-  const deathBlow4 = await createSkill(
-    'Death Blow 4',
-    Action.UnitInitiateCombat,
-    { atk: 8 },
-  );
+  const skillsList = skills;
 
-  const fierceStance1 = await createSkill(
-    'Fierce Stance 1',
-    Action.FoeInitiatesCombat,
-    { atk: 2 },
-  );
-  const fierceStance2 = await createSkill(
-    'Fierce Stance 2',
-    Action.FoeInitiatesCombat,
-    { atk: 4 },
-  );
-  const fierceStance3 = await createSkill(
-    'Fierce Stance 3',
-    Action.FoeInitiatesCombat,
-    { atk: 6 },
-  );
+  for (let skill of skillsList) {
+    await createSkill(skill.skillFamily, skill.deltaSoft, skill.tier);
+  }
 }
 main()
   .then(async () => {
@@ -91,23 +60,27 @@ main()
     process.exit(1);
   });
 
-async function createSkill(name: string, action: Action, deltaSoft: Object) {
-  return await prisma.skill.create({
+async function createSkill(
+  skillFamily: SkillFamily,
+  deltaSoft: Object,
+  tier: number,
+) {
+  await prisma.skill.create({
     data: {
-      name: name,
-      slot: Slot.A,
+      name: skillFamily.name + ' ' + tier,
+      slot: skillFamily.slot,
       cond: {
         create: [
           {
             target: Target.Unit,
-            action: action,
+            action: skillFamily.action,
           },
         ],
       },
       effect: {
         create: [
           {
-            description: 'Unit gains Atk',
+            description: skillFamily.description,
             deltaSoft: JSON.stringify(deltaSoft),
           },
         ],
