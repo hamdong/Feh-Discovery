@@ -29,39 +29,3 @@ app.get('/api/users/:id', async (req: Request, res: Response, next) => {
   res.json(users);
 });
 
-/*
-app.get('/api/effects', (req: Request, res: Response, next) => {
-  const sql = 'SELECT * from tblEffect';
-  var params: never[] = [];
-  db.all(sql, params, (err, rows) => {
-    if (err) {
-      res.status(400).json({ error: err.message });
-      return;
-    }
-    res.json({
-      message: 'success',
-      data: rows,
-    });
-  });
-});
-
-app.get('/api/skills', (req: Request, res: Response, next) => {
-  const sql =
-    'SELECT tblSkill.effectId, name, slot, cond, value, stat FROM tblSkill INNER JOIN tblEffect ON tblSkill.effectId = tblEffect.id; ORDER BY tblSkill.name DESC';
-  var params: never[] = [];
-  db.all(sql, params, (err, rows) => {
-    if (err) {
-      res.status(400).json({ error: err.message });
-      return;
-    }
-    res.json({
-      message: 'success',
-      data: rows,
-    });
-  });
-});
-
-app.use(function (req: Request, res: Response) {
-  res.status(404);
-});
-*/
