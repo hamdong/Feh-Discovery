@@ -9,6 +9,13 @@ export class SkillFamily {
   slot: string;
 }
 
+export const atk: SkillFamily = {
+  name: SkillName.Atk,
+  action: Action.None,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+};
+
 export const deathBlow: SkillFamily = {
   name: SkillName.DeathBlow,
   action: Action.UnitInitiateCombat,

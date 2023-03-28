@@ -1,4 +1,5 @@
 export enum Action {
+  None = '',
   UnitInitiateCombat = 'Unit initiates combat',
   FoeInitiatesCombat = 'Foe initiates combat',
   DefendingAR = 'Defending in Aether Raids',

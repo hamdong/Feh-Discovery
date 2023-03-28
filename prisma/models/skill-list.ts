@@ -1,6 +1,22 @@
-import { deathBlow, fierceStance } from './skill-family';
+import { atk, deathBlow, fierceStance } from './skill-family';
+import { ISkill } from './skill.interface';
 
-export const skills = [
+export const skills: ISkill[] = [
+  {
+    skillFamily: atk,
+    deltaFlat: { atk: 1 },
+    tier: 1,
+  },
+  {
+    skillFamily: atk,
+    deltaFlat: { atk: 2 },
+    tier: 2,
+  },
+  {
+    skillFamily: atk,
+    deltaFlat: { atk: 3 },
+    tier: 3,
+  },
   {
     skillFamily: deathBlow,
     deltaSoft: { atk: 2 },

@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import { Target } from './enums/target.enum';
-import { SkillFamily } from './models/skill-family';
 import { skills } from './models/skill-list';
+import { ISkill } from './models/skill.interface';
 
 const prisma = new PrismaClient();
 async function main() {
@@ -47,7 +47,7 @@ async function main() {
   const skillsList = skills;
 
   for (let skill of skillsList) {
-    await createSkill(skill.skillFamily, skill.deltaSoft, skill.tier);
+    await createSkill(skill);
   }
 }
 main()
@@ -60,28 +60,26 @@ main()
     process.exit(1);
   });
 
-async function createSkill(
-  skillFamily: SkillFamily,
-  deltaSoft: Object,
-  tier: number,
-) {
+async function createSkill(skill: ISkill) {
   await prisma.skill.create({
     data: {
-      name: skillFamily.name + ' ' + tier,
-      slot: skillFamily.slot,
+      name: skill.skillFamily.name + ' ' + skill.tier,
+      slot: skill.skillFamily.slot,
       cond: {
         create: [
           {
             target: Target.Unit,
-            action: skillFamily.action,
+            action: skill.skillFamily.action,
           },
         ],
       },
       effect: {
         create: [
           {
-            description: skillFamily.description,
-            deltaSoft: JSON.stringify(deltaSoft),
+            description: skill.skillFamily.description,
+            deltaSoft: JSON.stringify(skill.deltaSoft),
+            deltaHard: JSON.stringify(skill.deltaHard),
+            deltaFlat: JSON.stringify(skill.deltaFlat),
           },
         ],
       },

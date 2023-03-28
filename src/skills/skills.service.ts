@@ -19,6 +19,7 @@ export class SkillsService {
             description: true,
             deltaSoft: true,
             deltaHard: true,
+            deltaFlat: true,
           },
         },
       },
@@ -28,8 +29,9 @@ export class SkillsService {
       ...skill,
       effect: skill.effect.map((effect) => ({
         ...effect,
-        deltaSoft:
-          effect.deltaSoft !== null ? JSON.parse(effect.deltaSoft) : '',
+        deltaSoft: JSON.parse(effect.deltaSoft),
+        deltaHard: JSON.parse(effect.deltaHard),
+        deltaFlat: JSON.parse(effect.deltaFlat),
       })),
     }));
     return mapped;
