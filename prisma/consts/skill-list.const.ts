@@ -54,17 +54,17 @@ export const skills: ISkill[] = [
   },
   {
     skillFamily: spd,
-    deltaSoft: { spd: 1 },
+    deltaFlat: { spd: 1 },
     tier: 1,
   },
   {
     skillFamily: spd,
-    deltaSoft: { spd: 3 },
+    deltaFlat: { spd: 3 },
     tier: 2,
   },
   {
     skillFamily: spd,
-    deltaSoft: { spd: 3 },
+    deltaFlat: { spd: 3 },
     tier: 3,
   },
 ];
