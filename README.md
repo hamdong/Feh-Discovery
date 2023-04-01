@@ -45,6 +45,16 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+## Database
+
+```bash
+# push database changes
+$ npm run dbpush
+
+# seed database changes
+$ npm run seed
+```
+
 ## Test
 
 ```bash
