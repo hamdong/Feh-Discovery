@@ -1,5 +1,5 @@
-import { atk, deathBlow, fierceStance } from './skill-family';
-import { ISkill } from './skill.interface';
+import { atk, deathBlow, fierceStance } from '../models/skill-family';
+import { ISkill } from '../models/skill.interface';
 
 export const skills: ISkill[] = [
   {

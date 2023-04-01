@@ -22,6 +22,12 @@ export class SkillsService {
             deltaFlat: true,
           },
         },
+        restrictions: {
+          select: {
+            weapon: true,
+            color: true
+          }
+        }
       },
     });
 

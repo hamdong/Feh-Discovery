@@ -27,11 +27,20 @@ model Post {
 }
 
 model Skill {
-  id     Int         @id @default(autoincrement())
-  name   String
-  slot   String
-  cond   Condition[]
-  effect Effect[]
+  id           Int            @id @default(autoincrement())
+  name         String
+  slot         String
+  cond         Condition[]
+  effect       Effect[]
+  restrictions Restrictions[]
+}
+
+model Restrictions {
+  id         Int    @id @default(autoincrement())
+  weapon     String
+  color      String
+  skill Skill? @relation(fields: [skillId], references: [id])
+  skillId    Int?
 }
 
 model Condition {
