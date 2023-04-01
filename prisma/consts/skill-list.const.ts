@@ -1,4 +1,4 @@
-import { atk, deathBlow, fierceStance } from '../models/skill-family';
+import { atk, deathBlow, fierceStance, spd } from '../models/skill-family';
 import { ISkill } from '../models/skill.interface';
 
 export const skills: ISkill[] = [
@@ -50,6 +50,21 @@ export const skills: ISkill[] = [
   {
     skillFamily: fierceStance,
     deltaSoft: { atk: 6 },
+    tier: 3,
+  },
+  {
+    skillFamily: spd,
+    deltaSoft: { spd: 1 },
+    tier: 1,
+  },
+  {
+    skillFamily: spd,
+    deltaSoft: { spd: 3 },
+    tier: 2,
+  },
+  {
+    skillFamily: spd,
+    deltaSoft: { spd: 3 },
     tier: 3,
   },
 ];

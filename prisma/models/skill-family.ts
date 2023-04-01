@@ -36,3 +36,11 @@ export const fierceStance: SkillFamily = {
   slot: Slot.A,
   restrictions: []
 };
+
+export const spd: SkillFamily = {
+  name: SkillName.Spd,
+  action: Action.None,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: []
+};
