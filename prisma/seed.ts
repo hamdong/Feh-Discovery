@@ -71,8 +71,8 @@ async function createRestrictions(weapon: IWeaponType) {
   await prisma.restrictions.create({
     data: {
       weapon: weapon.weapon,
-      color: weapon.color
-    }
+      color: weapon.color,
+    },
   });
 }
 
@@ -84,7 +84,7 @@ async function createSkill(skill: ISkill) {
       cond: {
         create: [
           {
-            target: Target.Unit,
+            target: skill.skillFamily.target,
             action: skill.skillFamily.action,
           },
         ],
@@ -100,7 +100,7 @@ async function createSkill(skill: ISkill) {
         ],
       },
       restrictions: {
-        create: skill.skillFamily.restrictions
+        create: skill.skillFamily.restrictions,
       },
     },
   });
