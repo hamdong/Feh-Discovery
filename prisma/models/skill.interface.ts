@@ -1,8 +1,8 @@
-import { SkillFamily } from './skill-family';
+import { ISkillFamily } from './skill-family.interface';
 import { IStatChanges } from './stat-changes.interface';
 
 export interface ISkill {
-  skillFamily: SkillFamily;
+  skillFamily: ISkillFamily;
   deltaSoft?: IStatChanges;
   deltaHard?: IStatChanges;
   deltaFlat?: IStatChanges;

@@ -25,9 +25,9 @@ export class SkillsService {
         restrictions: {
           select: {
             weapon: true,
-            color: true
-          }
-        }
+            color: true,
+          },
+        },
       },
     });
 

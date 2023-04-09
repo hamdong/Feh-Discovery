@@ -5,7 +5,7 @@ import { IWeaponType } from './weapon-type.interface';
 import { Color } from '../enums/color.enum';
 import { Weapon } from '../enums/weapon.enum';
 
-export class SkillFamily {
+export interface ISkillFamily {
   name: string;
   action: string;
   description: string;
@@ -13,34 +13,34 @@ export class SkillFamily {
   restrictions: IWeaponType[];
 }
 
-export const atk: SkillFamily = {
+export const atk: ISkillFamily = {
   name: SkillName.Atk,
   action: Action.None,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: []
+  restrictions: [],
 };
 
-export const deathBlow: SkillFamily = {
+export const deathBlow: ISkillFamily = {
   name: SkillName.DeathBlow,
   action: Action.UnitInitiateCombat,
   description: SkillDescription.UnitGainsAtk,
   slot: Slot.A,
-  restrictions: [{ weapon: Weapon.Staff, color: Color.Colorless }]
+  restrictions: [{ weapon: Weapon.Staff, color: Color.Colorless }],
 };
 
-export const fierceStance: SkillFamily = {
+export const fierceStance: ISkillFamily = {
   name: SkillName.FierceStance,
   action: Action.FoeInitiatesCombat,
   description: SkillDescription.UnitGainsAtk,
   slot: Slot.A,
-  restrictions: []
+  restrictions: [],
 };
 
-export const spd: SkillFamily = {
+export const spd: ISkillFamily = {
   name: SkillName.Spd,
   action: Action.None,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: []
+  restrictions: [],
 };
