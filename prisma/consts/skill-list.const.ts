@@ -67,4 +67,49 @@ export const skills: ISkill[] = [
     deltaFlat: { spd: 3 },
     tier: 3,
   },
+  {
+    skillFamily: fam.hp,
+    deltaFlat: { hp: 3 },
+    tier: 1
+  },
+  {
+    skillFamily: fam.hp,
+    deltaFlat: { hp: 4 },
+    tier: 2
+  },
+  {
+    skillFamily: fam.hp,
+    deltaFlat: { hp: 5 },
+    tier: 3
+  },
+  {
+    skillFamily: fam.def,
+    deltaFlat: { def: 1 },
+    tier: 1
+  },
+  {
+    skillFamily: fam.def,
+    deltaFlat: { def: 2 },
+    tier: 2
+  },
+  {
+    skillFamily: fam.def,
+    deltaFlat: { def: 3 },
+    tier: 3
+  },
+  {
+    skillFamily: fam.res,
+    deltaFlat: { res: 1 },
+    tier: 1
+  },
+  {
+    skillFamily: fam.res,
+    deltaFlat: { res: 2 },
+    tier: 2
+  },
+  {
+    skillFamily: fam.res,
+    deltaFlat: { res: 3 },
+    tier: 3
+  },
 ];
