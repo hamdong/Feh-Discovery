@@ -1,69 +1,69 @@
-import * as fam from '../models/skill-family.interface';
+import { atk, deathBlow, fierceStance, spd } from '../models';
 import { ISkill } from '../models/skill.interface';
 
 export const skills: ISkill[] = [
   {
-    skillFamily: fam.atk,
+    skillFamily: atk,
     deltaFlat: { atk: 1 },
     tier: 1,
   },
   {
-    skillFamily: fam.atk,
+    skillFamily: atk,
     deltaFlat: { atk: 2 },
     tier: 2,
   },
   {
-    skillFamily: fam.atk,
+    skillFamily: atk,
     deltaFlat: { atk: 3 },
     tier: 3,
   },
   {
-    skillFamily: fam.deathBlow,
+    skillFamily: deathBlow,
     deltaSoft: { atk: 2 },
     tier: 1,
   },
   {
-    skillFamily: fam.deathBlow,
+    skillFamily: deathBlow,
     deltaSoft: { atk: 4 },
     tier: 2,
   },
   {
-    skillFamily: fam.deathBlow,
+    skillFamily: deathBlow,
     deltaSoft: { atk: 6 },
     tier: 3,
   },
   {
-    skillFamily: fam.deathBlow,
+    skillFamily: deathBlow,
     deltaSoft: { atk: 8 },
     tier: 4,
   },
   {
-    skillFamily: fam.fierceStance,
+    skillFamily: fierceStance,
     deltaSoft: { atk: 2 },
     tier: 1,
   },
   {
-    skillFamily: fam.fierceStance,
+    skillFamily: fierceStance,
     deltaSoft: { atk: 4 },
     tier: 2,
   },
   {
-    skillFamily: fam.fierceStance,
+    skillFamily: fierceStance,
     deltaSoft: { atk: 6 },
     tier: 3,
   },
   {
-    skillFamily: fam.spd,
+    skillFamily: spd,
     deltaFlat: { spd: 1 },
     tier: 1,
   },
   {
-    skillFamily: fam.spd,
+    skillFamily: spd,
     deltaFlat: { spd: 2 },
     tier: 2,
   },
   {
-    skillFamily: fam.spd,
+    skillFamily: spd,
     deltaFlat: { spd: 3 },
     tier: 3,
   },

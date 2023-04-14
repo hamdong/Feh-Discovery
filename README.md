@@ -55,6 +55,8 @@ $ npm run dbpush
 $ npm run seed
 ```
 
+To full reset DB, run dbpush and then reset after
+
 ## Test
 
 ```bash
