@@ -96,6 +96,7 @@ async function createSkill(skill: ISkill) {
             deltaSoft: JSON.stringify(skill.deltaSoft),
             deltaHard: JSON.stringify(skill.deltaHard),
             deltaFlat: JSON.stringify(skill.deltaFlat),
+            statNotes: skill.statNotes,
           },
         ],
       },

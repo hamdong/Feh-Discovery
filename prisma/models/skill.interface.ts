@@ -6,5 +6,6 @@ export interface ISkill {
   deltaSoft?: IStatChanges;
   deltaHard?: IStatChanges;
   deltaFlat?: IStatChanges;
+  statNotes?: string;
   tier: number;
 }

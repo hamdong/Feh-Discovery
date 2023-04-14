@@ -1,4 +1,11 @@
-import { atk, deathBlow, fierceStance, spd } from '../models';
+import {
+  ardAtkDef,
+  ardDefRes,
+  atk,
+  deathBlow,
+  fierceStance,
+  spd,
+} from '../models';
 import { ISkill } from '../models/skill.interface';
 
 export const skills: ISkill[] = [
@@ -65,6 +72,42 @@ export const skills: ISkill[] = [
   {
     skillFamily: spd,
     deltaFlat: { spd: 3 },
+    tier: 3,
+  },
+  {
+    skillFamily: ardDefRes,
+    deltaSoft: { def: 4, res: 4 },
+    statNotes: 'Based on number of defense structures',
+    tier: 1,
+  },
+  {
+    skillFamily: ardDefRes,
+    deltaSoft: { def: 7, res: 7 },
+    statNotes: 'Based on number of defense structures',
+    tier: 2,
+  },
+  {
+    skillFamily: ardDefRes,
+    deltaSoft: { def: 10, res: 10 },
+    statNotes: 'Based on number of defense structures',
+    tier: 3,
+  },
+  {
+    skillFamily: ardAtkDef,
+    deltaSoft: { atk: 4, def: 4 },
+    statNotes: 'Based on number of defense structures',
+    tier: 1,
+  },
+  {
+    skillFamily: ardAtkDef,
+    deltaSoft: { atk: 7, def: 7 },
+    statNotes: 'Based on number of defense structures',
+    tier: 2,
+  },
+  {
+    skillFamily: ardAtkDef,
+    deltaSoft: { atk: 10, def: 10 },
+    statNotes: 'Based on number of defense structures',
     tier: 3,
   },
 ];
