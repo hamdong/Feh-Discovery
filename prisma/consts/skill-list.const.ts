@@ -7,7 +7,11 @@ import {
   spd,
   def,
   res,
-  hp
+  hp,
+  HpAtk,
+  HpSpd,
+  HpDef,
+  HpRes
 } from '../models';
 import { ISkill } from '../models/skill.interface';
 
@@ -120,6 +124,46 @@ export const skills: ISkill[] = [
   {
     skillFamily: res,
     deltaFlat: { res: 3 },
+    tier: 3
+  },
+  {
+    skillFamily: HpAtk,
+    deltaFlat: { hp: 3, atk: 1 },
+    tier: 2
+  },
+  {
+    skillFamily: HpAtk,
+    deltaFlat: { hp: 4, atk: 2 },
+    tier: 3
+  },
+  {
+    skillFamily: HpSpd,
+    deltaFlat: { hp: 3, spd: 1 },
+    tier: 2
+  },
+  {
+    skillFamily: HpSpd,
+    deltaFlat: { hp: 4, spd: 2 },
+    tier: 3
+  },
+  {
+    skillFamily: HpDef,
+    deltaFlat: { hp: 3, def: 1 },
+    tier: 2
+  },
+  {
+    skillFamily: HpDef,
+    deltaFlat: { hp: 4, def: 2 },
+    tier: 3
+  },
+  {
+    skillFamily: HpRes,
+    deltaFlat: { hp: 3, res: 1 },
+    tier: 2
+  },
+  {
+    skillFamily: HpRes,
+    deltaFlat: { hp: 4, res: 2 },
     tier: 3
   },
   {

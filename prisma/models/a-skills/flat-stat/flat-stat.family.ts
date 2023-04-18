@@ -51,3 +51,39 @@ export const hp: ISkillFamily = {
   slot: Slot.A,
   restrictions: [],
 };
+
+export const HpAtk: ISkillFamily = {
+  name: SkillName.HPAtk,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
+
+export const HpSpd: ISkillFamily = {
+  name: SkillName.HPSpd,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
+
+export const HpDef: ISkillFamily = {
+  name: SkillName.HPDef,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
+
+export const HpRes: ISkillFamily = {
+  name: SkillName.HPRes,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
