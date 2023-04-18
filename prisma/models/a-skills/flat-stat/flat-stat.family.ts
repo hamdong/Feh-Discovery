@@ -114,3 +114,30 @@ export const AtkRes: ISkillFamily = {
   slot: Slot.A,
   restrictions: [],
 };
+
+export const SpdDef: ISkillFamily = {
+  name: SkillName.SpdDef,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
+
+export const SpdRes: ISkillFamily = {
+  name: SkillName.SpdRes,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
+
+export const DefRes: ISkillFamily = {
+  name: SkillName.DefRes,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
