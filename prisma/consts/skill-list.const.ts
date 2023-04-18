@@ -5,6 +5,9 @@ import {
   deathBlow,
   fierceStance,
   spd,
+  def,
+  res,
+  hp
 } from '../models';
 import { ISkill } from '../models/skill.interface';
 
@@ -73,6 +76,51 @@ export const skills: ISkill[] = [
     skillFamily: spd,
     deltaFlat: { spd: 3 },
     tier: 3,
+  },
+  {
+    skillFamily: hp,
+    deltaFlat: { hp: 3 },
+    tier: 1
+  },
+  {
+    skillFamily: hp,
+    deltaFlat: { hp: 4 },
+    tier: 2
+  },
+  {
+    skillFamily: hp,
+    deltaFlat: { hp: 5 },
+    tier: 3
+  },
+  {
+    skillFamily: def,
+    deltaFlat: { def: 1 },
+    tier: 1
+  },
+  {
+    skillFamily: def,
+    deltaFlat: { def: 2 },
+    tier: 2
+  },
+  {
+    skillFamily: def,
+    deltaFlat: { def: 3 },
+    tier: 3
+  },
+  {
+    skillFamily: res,
+    deltaFlat: { res: 1 },
+    tier: 1
+  },
+  {
+    skillFamily: res,
+    deltaFlat: { res: 2 },
+    tier: 2
+  },
+  {
+    skillFamily: res,
+    deltaFlat: { res: 3 },
+    tier: 3
   },
   {
     skillFamily: ardDefRes,

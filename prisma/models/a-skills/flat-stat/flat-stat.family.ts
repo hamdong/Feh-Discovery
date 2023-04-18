@@ -24,3 +24,30 @@ export const spd: ISkillFamily = {
   slot: Slot.A,
   restrictions: [],
 };
+
+export const def: ISkillFamily = {
+  name: SkillName.Def,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
+
+export const res: ISkillFamily = {
+  name: SkillName.Res,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
+
+export const hp: ISkillFamily = {
+  name: SkillName.HP,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
