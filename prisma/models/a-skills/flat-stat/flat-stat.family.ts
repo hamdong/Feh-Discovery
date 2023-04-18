@@ -87,3 +87,30 @@ export const HpRes: ISkillFamily = {
   slot: Slot.A,
   restrictions: [],
 };
+
+export const AtkSpd: ISkillFamily = {
+  name: SkillName.AtkSpd,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
+
+export const AtkDef: ISkillFamily = {
+  name: SkillName.AtkDef,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};
+
+export const AtkRes: ISkillFamily = {
+  name: SkillName.AtkRes,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  restrictions: [],
+};

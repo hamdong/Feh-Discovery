@@ -12,6 +12,9 @@ export enum SkillName {
   HPSpd = 'HP/Spd',
   HPDef = 'HP/Def',
   HPRes = 'HP/Res',
+  AtkSpd = 'Atk/Spd',
+  AtkDef = 'Atk/Def',
+  AtkRes = 'Atk/Res',
 }
 
 export enum SkillDescription {
