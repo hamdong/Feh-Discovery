@@ -20,6 +20,7 @@ export class SkillsService {
             deltaSoft: true,
             deltaHard: true,
             deltaFlat: true,
+            statNotes: true,
           },
         },
         restrictions: {
