@@ -5,6 +5,9 @@ export enum SkillName {
   DeathBlow = 'Death Blow',
   FierceStance = 'Fierce Stance',
   Spd = 'Spd',
+  FortressDef = 'Fortress Def',
+  FortressRes = 'Fortress Res',
+  FortressDefRes = 'Fortress Def/Res'
 }
 
 export enum SkillDescription {
