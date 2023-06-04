@@ -1,7 +1,6 @@
 import { PrismaClient } from '@prisma/client';
 import { Target } from './enums/target.enum';
 import { ISkill } from './models/skill.interface';
-import { weapons } from './consts/weapon-list.const';
 import { IWeaponType } from './models/weapon-type.interface';
 import { skills } from './consts/skill-list.const';
 
@@ -47,11 +46,6 @@ async function main() {
   console.log({ alice, bob });
 
   const skillsList = skills;
-  const weaponsList = weapons;
-
-  for (let weapon of weaponsList) {
-    await createRestrictions(weapon);
-  }
 
   for (let skill of skillsList) {
     await createSkill(skill);
@@ -67,20 +61,12 @@ main()
     process.exit(1);
   });
 
-async function createRestrictions(weapon: IWeaponType) {
-  await prisma.restrictions.create({
-    data: {
-      weapon: weapon.weapon,
-      color: weapon.color,
-    },
-  });
-}
-
 async function createSkill(skill: ISkill) {
   await prisma.skill.create({
     data: {
       name: skill.skillFamily.name + ' ' + skill.tier,
       slot: skill.skillFamily.slot,
+      restrictions: JSON.stringify(skill.skillFamily.restrictions),
       cond: {
         create: [
           {
@@ -99,9 +85,6 @@ async function createSkill(skill: ISkill) {
             statNotes: skill.statNotes,
           },
         ],
-      },
-      restrictions: {
-        create: skill.skillFamily.restrictions,
       },
     },
   });
