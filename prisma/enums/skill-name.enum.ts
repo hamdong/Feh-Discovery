@@ -5,6 +5,19 @@ export enum SkillName {
   DeathBlow = 'Death Blow',
   FierceStance = 'Fierce Stance',
   Spd = 'Spd',
+  HP = 'HP',
+  Def = 'Def',
+  Res = 'Res',
+  HPAtk = 'HP/Atk',
+  HPSpd = 'HP/Spd',
+  HPDef = 'HP/Def',
+  HPRes = 'HP/Res',
+  AtkSpd = 'Atk/Spd',
+  AtkDef = 'Atk/Def',
+  AtkRes = 'Atk/Res',
+  SpdDef = 'Spd/Def',
+  SpdRes = 'Spd/Res',
+  DefRes = 'Def/Res'
 }
 
 export enum SkillDescription {
