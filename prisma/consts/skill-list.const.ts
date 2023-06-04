@@ -248,4 +248,49 @@ export const skills: ISkill[] = [
     statNotes: 'Based on number of defense structures',
     tier: 3,
   },
+  {
+    skillFamily: s.fortressDef,
+    deltaFlat: { atk: -3, def: 3 },
+    tier: 1,
+  },
+  {
+    skillFamily: s.fortressDef,
+    deltaFlat: { atk: -3, def: 4 },
+    tier: 2
+  },
+  {
+    skillFamily: s.fortressDef,
+    deltaFlat: { atk: -3, def: 5 },
+    tier: 3
+  },
+  {
+    skillFamily: s.fortressRes,
+    deltaFlat: { atk: -3, res: 3 },
+    tier: 1,
+  },
+  {
+    skillFamily: s.fortressRes,
+    deltaFlat: { atk: -3, res: 4 },
+    tier: 2
+  },
+  {
+    skillFamily: s.fortressRes,
+    deltaFlat: { atk: -3, res: 5 },
+    tier: 3
+  },
+  {
+    skillFamily: s.fortressDefRes,
+    deltaFlat: { atk: -3, def: 3, res: 3},
+    tier: 2,
+  },
+  {
+    skillFamily: s.fortressDefRes,
+    deltaFlat: { atk: -3, def: 4, res: 4 },
+    tier: 3
+  },
+  {
+    skillFamily: s.fortressDefRes,
+    deltaFlat: { atk: -2, def: 6, res: 6 },
+    tier: 4
+  },
 ];
