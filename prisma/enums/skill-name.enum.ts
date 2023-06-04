@@ -17,7 +17,10 @@ export enum SkillName {
   AtkRes = 'Atk/Res',
   SpdDef = 'Spd/Def',
   SpdRes = 'Spd/Res',
-  DefRes = 'Def/Res'
+  DefRes = 'Def/Res',
+  FortressDef = 'Fortress Def',
+  FortressRes = 'Fortress Res',
+  FortressDefRes = 'Fortress Def/Res'
 }
 
 export enum SkillDescription {

@@ -17,7 +17,10 @@ import {
   AtkRes,
   SpdDef,
   SpdRes,
-  DefRes
+  DefRes,
+  fortressDef,
+  fortressRes,
+  fortressDefRes
 } from '../models';
 import { ISkill } from '../models/skill.interface';
 
@@ -267,5 +270,50 @@ export const skills: ISkill[] = [
     deltaSoft: { atk: 10, def: 10 },
     statNotes: 'Based on number of defense structures',
     tier: 3,
+  },
+  {
+    skillFamily: fortressDef,
+    deltaFlat: { atk: -3, def: 3 },
+    tier: 1,
+  },
+  {
+    skillFamily: fortressDef,
+    deltaFlat: { atk: -3, def: 4 },
+    tier: 2
+  },
+  {
+    skillFamily: fortressDef,
+    deltaFlat: { atk: -3, def: 5 },
+    tier: 3
+  },
+  {
+    skillFamily: fortressRes,
+    deltaFlat: { atk: -3, res: 3 },
+    tier: 1,
+  },
+  {
+    skillFamily: fortressRes,
+    deltaFlat: { atk: -3, res: 4 },
+    tier: 2
+  },
+  {
+    skillFamily: fortressRes,
+    deltaFlat: { atk: -3, res: 5 },
+    tier: 3
+  },
+  {
+    skillFamily: fortressDefRes,
+    deltaFlat: { atk: -3, def: 3, res: 3},
+    tier: 2,
+  },
+  {
+    skillFamily: fortressDefRes,
+    deltaFlat: { atk: -3, def: 4, res: 4 },
+    tier: 3
+  },
+  {
+    skillFamily: fortressDefRes,
+    deltaFlat: { atk: -2, def: 6, res: 6 },
+    tier: 4
   },
 ];
