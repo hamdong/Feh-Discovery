@@ -15,5 +15,6 @@ export const deathBlow: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsInCombatStat,
   slot: Slot.A,
-  restrictions: [{ weapon: Weapon.Staff, color: Color.Colorless }],
+  weaponRestrictions: [{ weapon: Weapon.Staff, color: Color.Colorless }],
+  movementRestrictions: [],
 };

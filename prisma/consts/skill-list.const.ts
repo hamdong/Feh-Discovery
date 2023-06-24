@@ -7,4 +7,5 @@ export const skills: ISkill[] = [].concat(
   s.flatStatSet,
   s.fortressSet,
   s.stanceSet,
+  s.shieldSet,
 );

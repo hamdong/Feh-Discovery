@@ -13,7 +13,8 @@ export const ardDefRes: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsInCombatStatByStructure,
   slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };
 
 export const ardAtkDef: ISkillFamily = {
@@ -22,5 +23,6 @@ export const ardAtkDef: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsInCombatStatByStructure,
   slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };

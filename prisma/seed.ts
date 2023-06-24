@@ -66,7 +66,10 @@ async function createSkill(skill: ISkill) {
     data: {
       name: skill.skillFamily.name + ' ' + skill.tier,
       slot: skill.skillFamily.slot,
-      restrictions: JSON.stringify(skill.skillFamily.restrictions),
+      weaponRestrictions: JSON.stringify(skill.skillFamily.weaponRestrictions),
+      movementRestrictions: JSON.stringify(
+        skill.skillFamily.movementRestrictions,
+      ),
       cond: {
         create: [
           {

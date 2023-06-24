@@ -27,12 +27,13 @@ model Post {
 }
 
 model Skill {
-  id            Int       @id @default(autoincrement())
-  name          String
-  slot          String
-  restrictions  String
-  cond          Condition[]
-  effect        Effect[]
+  id                   Int         @id @default(autoincrement())
+  name                 String
+  slot                 String
+  weaponRestrictions   String
+  movementRestrictions String
+  cond                 Condition[]
+  effect               Effect[]
 }
 
 model Condition {

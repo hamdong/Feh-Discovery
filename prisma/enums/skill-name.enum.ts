@@ -20,11 +20,17 @@ export enum SkillName {
   DefRes = 'Def/Res',
   FortressDef = 'Fortress Def',
   FortressRes = 'Fortress Res',
-  FortressDefRes = 'Fortress Def/Res'
+  FortressDefRes = 'Fortress Def/Res',
+  SvalinnShield = 'Svalinn Shield',
+  GranisShield = "Grani's Shield",
+  IotesShield = "Iote's Shield",
 }
 
 export enum SkillDescription {
   GrantsStat = 'Grants stats to unit',
   GrantsInCombatStat = 'Grants unit stats in combat',
   GrantsInCombatStatByStructure = 'Grants unit stats in combat by AR structure',
+  NeutralizeArmorEffectiveness = 'Neutralizes "effective against armored" bonuses',
+  NeutralizeCavalryEffectiveness = 'Neutralizes "effective against cavalry" bonuses',
+  NeutralizeFlierEffectiveness = 'Neutralizes "effective against fliers" bonuses',
 }

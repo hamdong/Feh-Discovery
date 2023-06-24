@@ -1,4 +1,4 @@
-import { ISkillFamily } from '../../../models/skill-family.interface';
+import { ISkillFamily } from '../../skill-family.interface';
 import {
   Action,
   SkillDescription,
@@ -13,7 +13,8 @@ export const atk: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };
 
 export const spd: ISkillFamily = {
@@ -22,7 +23,8 @@ export const spd: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };
 
 export const def: ISkillFamily = {
@@ -31,7 +33,8 @@ export const def: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };
 
 export const res: ISkillFamily = {
@@ -40,7 +43,8 @@ export const res: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };
 
 export const hp: ISkillFamily = {
@@ -49,52 +53,8 @@ export const hp: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: [],
-};
-
-export const HpAtk: ISkillFamily = {
-  name: SkillName.HPAtk,
-  action: Action.None,
-  target: Target.Unit,
-  description: SkillDescription.GrantsStat,
-  slot: Slot.A,
-  restrictions: [],
-};
-
-export const HpSpd: ISkillFamily = {
-  name: SkillName.HPSpd,
-  action: Action.None,
-  target: Target.Unit,
-  description: SkillDescription.GrantsStat,
-  slot: Slot.A,
-  restrictions: [],
-};
-
-export const HpDef: ISkillFamily = {
-  name: SkillName.HPDef,
-  action: Action.None,
-  target: Target.Unit,
-  description: SkillDescription.GrantsStat,
-  slot: Slot.A,
-  restrictions: [],
-};
-
-export const HpRes: ISkillFamily = {
-  name: SkillName.HPRes,
-  action: Action.None,
-  target: Target.Unit,
-  description: SkillDescription.GrantsStat,
-  slot: Slot.A,
-  restrictions: [],
-};
-
-export const AtkSpd: ISkillFamily = {
-  name: SkillName.AtkSpd,
-  action: Action.None,
-  target: Target.Unit,
-  description: SkillDescription.GrantsStat,
-  slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };
 
 export const AtkDef: ISkillFamily = {
@@ -103,7 +63,8 @@ export const AtkDef: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };
 
 export const AtkRes: ISkillFamily = {
@@ -112,25 +73,18 @@ export const AtkRes: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };
 
-export const SpdDef: ISkillFamily = {
-  name: SkillName.SpdDef,
+export const AtkSpd: ISkillFamily = {
+  name: SkillName.AtkSpd,
   action: Action.None,
   target: Target.Unit,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: [],
-};
-
-export const SpdRes: ISkillFamily = {
-  name: SkillName.SpdRes,
-  action: Action.None,
-  target: Target.Unit,
-  description: SkillDescription.GrantsStat,
-  slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };
 
 export const DefRes: ISkillFamily = {
@@ -139,5 +93,66 @@ export const DefRes: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsStat,
   slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
+};
+
+export const HpAtk: ISkillFamily = {
+  name: SkillName.HPAtk,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  weaponRestrictions: [],
+  movementRestrictions: [],
+};
+
+export const HpDef: ISkillFamily = {
+  name: SkillName.HPDef,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  weaponRestrictions: [],
+  movementRestrictions: [],
+};
+
+export const HpRes: ISkillFamily = {
+  name: SkillName.HPRes,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  weaponRestrictions: [],
+  movementRestrictions: [],
+};
+
+export const HpSpd: ISkillFamily = {
+  name: SkillName.HPSpd,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  weaponRestrictions: [],
+  movementRestrictions: [],
+};
+
+export const SpdDef: ISkillFamily = {
+  name: SkillName.SpdDef,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  weaponRestrictions: [],
+  movementRestrictions: [],
+};
+
+export const SpdRes: ISkillFamily = {
+  name: SkillName.SpdRes,
+  action: Action.None,
+  target: Target.Unit,
+  description: SkillDescription.GrantsStat,
+  slot: Slot.A,
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };

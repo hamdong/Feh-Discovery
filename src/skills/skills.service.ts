@@ -23,12 +23,6 @@ export class SkillsService {
             statNotes: true,
           },
         },
-        restrictions: {
-          select: {
-            weapon: true,
-            color: true,
-          },
-        },
       },
     });
 

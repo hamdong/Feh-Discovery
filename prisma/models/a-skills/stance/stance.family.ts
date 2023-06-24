@@ -13,5 +13,6 @@ export const fierceStance: ISkillFamily = {
   target: Target.Unit,
   description: SkillDescription.GrantsInCombatStat,
   slot: Slot.A,
-  restrictions: [],
+  weaponRestrictions: [],
+  movementRestrictions: [],
 };
