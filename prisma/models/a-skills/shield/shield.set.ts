@@ -1,24 +1,28 @@
-import { ISkill } from 'prisma/models/skill.interface';
+import { Description, Name } from '../../../enums';
+import { ISkill } from '../../skill.interface';
 import { granisShield, iotesShield, svalinnShield } from './shield.family';
 
 const svalinnShieldSet: ISkill[] = [
   {
+    name: Name.SvalinnShield,
+    description: Description.SvalinnShield,
     skillFamily: svalinnShield,
-    tier: 1,
   },
 ];
 
 const granisShieldSet: ISkill[] = [
   {
+    name: Name.GranisShield,
+    description: Description.GranisShield,
     skillFamily: granisShield,
-    tier: 1,
   },
 ];
 
 const iotesShieldSet: ISkill[] = [
   {
+    name: Name.IotesShield,
+    description: Description.IotesShield,
     skillFamily: iotesShield,
-    tier: 1,
   },
 ];
 

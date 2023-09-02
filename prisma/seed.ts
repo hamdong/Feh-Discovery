@@ -1,5 +1,4 @@
 import { PrismaClient } from '@prisma/client';
-import { Target } from './enums/target.enum';
 import { ISkill } from './models/skill.interface';
 import { IWeaponType } from './models/weapon-type.interface';
 import { skills } from './consts/skill-list.const';
@@ -64,28 +63,19 @@ main()
 async function createSkill(skill: ISkill) {
   await prisma.skill.create({
     data: {
-      name: skill.skillFamily.name + ' ' + skill.tier,
+      name: skill.name,
+      description: skill.description,
       slot: skill.skillFamily.slot,
       weaponRestrictions: JSON.stringify(skill.skillFamily.weaponRestrictions),
       movementRestrictions: JSON.stringify(
         skill.skillFamily.movementRestrictions,
       ),
-      cond: {
-        create: [
-          {
-            target: skill.skillFamily.target,
-            action: skill.skillFamily.action,
-          },
-        ],
-      },
       effect: {
         create: [
           {
-            description: skill.skillFamily.description,
             deltaSoft: JSON.stringify(skill.deltaSoft),
             deltaHard: JSON.stringify(skill.deltaHard),
             deltaFlat: JSON.stringify(skill.deltaFlat),
-            statNotes: skill.statNotes,
           },
         ],
       },

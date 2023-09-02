@@ -27,30 +27,20 @@ model Post {
 }
 
 model Skill {
-  id                   Int         @id @default(autoincrement())
+  id                   Int      @id @default(autoincrement())
   name                 String
+  description          String
   slot                 String
   weaponRestrictions   String
   movementRestrictions String
-  cond                 Condition[]
   effect               Effect[]
 }
 
-model Condition {
-  id      Int    @id @default(autoincrement())
-  target  String
-  action  String
-  skill   Skill? @relation(fields: [skillId], references: [id])
-  skillId Int?
-}
-
 model Effect {
-  id          Int     @id @default(autoincrement())
-  description String
-  deltaSoft   String?
-  deltaHard   String?
-  deltaFlat   String?
-  statNotes   String?
-  skill       Skill?  @relation(fields: [skillId], references: [id])
-  skillId     Int
+  id        Int     @id @default(autoincrement())
+  deltaSoft String?
+  deltaHard String?
+  deltaFlat String?
+  skill     Skill?  @relation(fields: [skillId], references: [id])
+  skillId   Int
 }

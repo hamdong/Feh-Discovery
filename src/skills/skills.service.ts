@@ -8,19 +8,11 @@ export class SkillsService {
   async findAll() {
     const skills = await this.prisma.skill.findMany({
       include: {
-        cond: {
-          select: {
-            target: true,
-            action: true,
-          },
-        },
         effect: {
           select: {
-            description: true,
             deltaSoft: true,
             deltaHard: true,
             deltaFlat: true,
-            statNotes: true,
           },
         },
       },

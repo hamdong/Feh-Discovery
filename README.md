@@ -56,6 +56,9 @@ $ npm run seed
 
 # migrate database changes
 $ npm run migrate
+
+# reset db
+$ npm run reset
 ```
 
 To full reset DB, run dbpush (migrate if db changes) and then reset after
