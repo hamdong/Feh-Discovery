@@ -18,7 +18,7 @@ import {
   spd,
 } from './flat-stat.family';
 
-const hpSet: ISkill[] = [
+const hpSkills: ISkill[] = [
   {
     name: Name.HP1,
     skillFamily: hp,
@@ -39,7 +39,7 @@ const hpSet: ISkill[] = [
   },
 ];
 
-const atkSet: ISkill[] = [
+const atkSkills: ISkill[] = [
   {
     name: Name.Atk1,
     skillFamily: atk,
@@ -60,7 +60,7 @@ const atkSet: ISkill[] = [
   },
 ];
 
-const spdSet: ISkill[] = [
+const spdSkills: ISkill[] = [
   {
     name: Name.Spd1,
     skillFamily: spd,
@@ -81,7 +81,7 @@ const spdSet: ISkill[] = [
   },
 ];
 
-const defSet: ISkill[] = [
+const defSkills: ISkill[] = [
   {
     name: Name.Def1,
     skillFamily: def,
@@ -102,7 +102,7 @@ const defSet: ISkill[] = [
   },
 ];
 
-const resSet: ISkill[] = [
+const resSkills: ISkill[] = [
   {
     name: Name.Res1,
     skillFamily: res,
@@ -123,7 +123,7 @@ const resSet: ISkill[] = [
   },
 ];
 
-const hpAtkSet: ISkill[] = [
+const hpAtkSkills: ISkill[] = [
   {
     name: Name.HPAtk1,
     skillFamily: HpAtk,
@@ -138,7 +138,7 @@ const hpAtkSet: ISkill[] = [
   },
 ];
 
-const hpSpdSet: ISkill[] = [
+const hpSpdSkills: ISkill[] = [
   {
     name: Name.HPSpd1,
     skillFamily: HpSpd,
@@ -153,7 +153,7 @@ const hpSpdSet: ISkill[] = [
   },
 ];
 
-const hpDefSet: ISkill[] = [
+const hpDefSkills: ISkill[] = [
   {
     name: Name.HPDef1,
     skillFamily: HpDef,
@@ -168,7 +168,7 @@ const hpDefSet: ISkill[] = [
   },
 ];
 
-const hpResSet: ISkill[] = [
+const hpResSkills: ISkill[] = [
   {
     name: Name.HPRes1,
     skillFamily: HpRes,
@@ -183,7 +183,7 @@ const hpResSet: ISkill[] = [
   },
 ];
 
-const atkSpdSet: ISkill[] = [
+const atkSpdSkills: ISkill[] = [
   {
     name: Name.AtkSpd1,
     skillFamily: AtkSpd,
@@ -198,7 +198,7 @@ const atkSpdSet: ISkill[] = [
   },
 ];
 
-const atkDefSet: ISkill[] = [
+const atkDefSkills: ISkill[] = [
   {
     name: Name.AtkDef1,
     skillFamily: AtkDef,
@@ -213,7 +213,7 @@ const atkDefSet: ISkill[] = [
   },
 ];
 
-const atkResSet: ISkill[] = [
+const atkResSkills: ISkill[] = [
   {
     name: Name.AtkRes1,
     skillFamily: AtkRes,
@@ -228,7 +228,7 @@ const atkResSet: ISkill[] = [
   },
 ];
 
-const spdDefSet: ISkill[] = [
+const spdDefSkills: ISkill[] = [
   {
     name: Name.SpdDef1,
     skillFamily: SpdDef,
@@ -243,7 +243,7 @@ const spdDefSet: ISkill[] = [
   },
 ];
 
-const spdResSet: ISkill[] = [
+const spdResSkills: ISkill[] = [
   {
     name: Name.SpdRes1,
     skillFamily: SpdRes,
@@ -258,7 +258,7 @@ const spdResSet: ISkill[] = [
   },
 ];
 
-const defResSet: ISkill[] = [
+const defResSkills: ISkill[] = [
   {
     name: Name.DefRes1,
     skillFamily: DefRes,
@@ -273,20 +273,20 @@ const defResSet: ISkill[] = [
   },
 ];
 
-export const flatStatSet: ISkill[] = [].concat(
-  hpSet,
-  atkSet,
-  spdSet,
-  defSet,
-  resSet,
-  hpAtkSet,
-  hpSpdSet,
-  hpDefSet,
-  hpResSet,
-  atkSpdSet,
-  atkDefSet,
-  atkResSet,
-  spdDefSet,
-  spdResSet,
-  defResSet,
+export const flatStatSkills: ISkill[] = [].concat(
+  hpSkills,
+  atkSkills,
+  spdSkills,
+  defSkills,
+  resSkills,
+  hpAtkSkills,
+  hpSpdSkills,
+  hpDefSkills,
+  hpResSkills,
+  atkSpdSkills,
+  atkDefSkills,
+  atkResSkills,
+  spdDefSkills,
+  spdResSkills,
+  defResSkills,
 );

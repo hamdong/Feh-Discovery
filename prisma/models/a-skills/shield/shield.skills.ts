@@ -2,7 +2,7 @@ import { Description, Name } from '../../../enums';
 import { ISkill } from '../../skill.interface';
 import { granisShield, iotesShield, svalinnShield } from './shield.family';
 
-const svalinnShieldSet: ISkill[] = [
+const svalinnShieldSkills: ISkill[] = [
   {
     name: Name.SvalinnShield,
     description: Description.SvalinnShield,
@@ -10,7 +10,7 @@ const svalinnShieldSet: ISkill[] = [
   },
 ];
 
-const granisShieldSet: ISkill[] = [
+const granisShieldSkills: ISkill[] = [
   {
     name: Name.GranisShield,
     description: Description.GranisShield,
@@ -18,7 +18,7 @@ const granisShieldSet: ISkill[] = [
   },
 ];
 
-const iotesShieldSet: ISkill[] = [
+const iotesShieldSkills: ISkill[] = [
   {
     name: Name.IotesShield,
     description: Description.IotesShield,
@@ -26,8 +26,8 @@ const iotesShieldSet: ISkill[] = [
   },
 ];
 
-export const shieldSet: ISkill[] = [].concat(
-  svalinnShieldSet,
-  granisShieldSet,
-  iotesShieldSet,
+export const shieldSkills: ISkill[] = [].concat(
+  svalinnShieldSkills,
+  granisShieldSkills,
+  iotesShieldSkills,
 );

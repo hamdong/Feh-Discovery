@@ -2,7 +2,7 @@ import { Description, Name } from '../../../enums';
 import { ISkill } from '../../skill.interface';
 import { deathBlow } from './blow.family';
 
-const deathBlowSet: ISkill[] = [
+const deathBlowSkills: ISkill[] = [
   {
     name: Name.DeathBlow1,
     description: Description.DeathBlow1,
@@ -29,4 +29,4 @@ const deathBlowSet: ISkill[] = [
   },
 ];
 
-export const blowSet: ISkill[] = [].concat(deathBlowSet);
+export const blowSkills: ISkill[] = [].concat(deathBlowSkills);

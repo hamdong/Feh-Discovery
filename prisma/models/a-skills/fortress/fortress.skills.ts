@@ -2,7 +2,7 @@ import { Description, Name } from '../../../enums';
 import { ISkill } from '../../skill.interface';
 import { fortressDef, fortressDefRes, fortressRes } from './fortress.family';
 
-const fortressDefSet: ISkill[] = [
+const fortressDefSkills: ISkill[] = [
   {
     name: Name.FortressDef1,
     description: Description.FortressDef1,
@@ -23,7 +23,7 @@ const fortressDefSet: ISkill[] = [
   },
 ];
 
-const fortressResSet: ISkill[] = [
+const fortressResSkills: ISkill[] = [
   {
     name: Name.FortressRes1,
     description: Description.FortressRes1,
@@ -44,7 +44,7 @@ const fortressResSet: ISkill[] = [
   },
 ];
 
-const fortressDefResSet: ISkill[] = [
+const fortressDefResSkills: ISkill[] = [
   {
     name: Name.FortressDefRes1,
     description: Description.FortressDefRes1,
@@ -65,8 +65,8 @@ const fortressDefResSet: ISkill[] = [
   },
 ];
 
-export const fortressSet: ISkill[] = [].concat(
-  fortressDefSet,
-  fortressResSet,
-  fortressDefResSet,
+export const fortressSkills: ISkill[] = [].concat(
+  fortressDefSkills,
+  fortressResSkills,
+  fortressDefResSkills,
 );

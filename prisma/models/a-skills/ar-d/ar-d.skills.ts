@@ -2,7 +2,7 @@ import { Description, Name } from '../../../enums';
 import { ISkill } from '../../skill.interface';
 import { ardAtkDef, ardDefRes } from './ar-d.family';
 
-const ardDefResSet: ISkill[] = [
+const ardDefResSkills: ISkill[] = [
   {
     name: Name.ARDDefRes1,
     description: Description.ARDDefRes1,
@@ -23,7 +23,7 @@ const ardDefResSet: ISkill[] = [
   },
 ];
 
-const ardAtkDefSet: ISkill[] = [
+const ardAtkDefSkills: ISkill[] = [
   {
     name: Name.ARDAtkDef1,
     description: Description.ARDAtkDef1,
@@ -44,4 +44,4 @@ const ardAtkDefSet: ISkill[] = [
   },
 ];
 
-export const ardSet: ISkill[] = [].concat(ardDefResSet, ardAtkDefSet);
+export const ardSkills: ISkill[] = [].concat(ardDefResSkills, ardAtkDefSkills);

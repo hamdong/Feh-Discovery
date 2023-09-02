@@ -2,7 +2,7 @@ import { Description, Name } from '../../../enums';
 import { ISkill } from '../../skill.interface';
 import { fierceStance } from './stance.family';
 
-const fierceStanceSet: ISkill[] = [
+const fierceStanceSkills: ISkill[] = [
   {
     name: Name.FierceStance1,
     description: Description.FierceStance1,
@@ -23,4 +23,4 @@ const fierceStanceSet: ISkill[] = [
   },
 ];
 
-export const stanceSet: ISkill[] = [].concat(fierceStanceSet);
+export const stanceSkills: ISkill[] = [].concat(fierceStanceSkills);
